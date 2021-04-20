@@ -14,3 +14,11 @@ def mysqrt(x):
     print(ans)
 
 mysqrt(12)
+
+#转换成指数计算e^(0.5*lnx)
+#def mySqrt(self, x: int) -> int:
+#        if x == 0:
+#            return 0
+#        ans = int(math.exp(0.5 * math.log(x)))
+##存在误差，需要判断ans和ans+1哪个是结果
+#        return ans + 1 if (ans + 1) ** 2 <= x else ans
