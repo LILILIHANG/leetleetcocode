@@ -1,3 +1,9 @@
+#输入元素个数为n的顺序排列1，2，.........  ，n，翻转k次，每次选择一个区间【a，b】进行翻转，求经过k次翻转之后形成的排列的逆序数？
+#输入描述：
+#第一行输入两个正整数 n 和 k
+#接下来的 k 行每行输入两个正整数 a 和 b 
+#输出：逆序数
+
 import sys
 # 读取第一行的n
 line = sys.stdin.readline().strip()
@@ -30,3 +36,4 @@ for i in range(n):
         if nums[i]>nums[j]:
             p+=1
 print(p)
+
