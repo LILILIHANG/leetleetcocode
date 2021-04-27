@@ -52,6 +52,8 @@ class Solution:
 class Solution:
     def isBalanced(self, root: TreeNode) -> bool:
         if not root: return True
+#and 返回连续几个数中第一个为假的元素，若全部为真则返回最后一个为真的元素
+#or  返回连续几个数中的第一个为真的元素，若全部为假则返回最后一个为假的元素
         return abs(self.depth(root.left) - self.depth(root.right)) <= 1 and \
             self.isBalanced(root.left) and self.isBalanced(root.right)
 
