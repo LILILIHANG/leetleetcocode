@@ -20,6 +20,9 @@ class Solution(object):
 				return False
 			if left.val!=right.val:
 				return False
+			#对称树的条件
+			#左子树的左孩子=右子树的右孩子
+			#左子树的右孩子=右子树的左孩子
 			return dfs(left.left,right.right) and dfs(left.right,right.left)
 		# 用递归函数，比较左节点，右节点
 		return dfs(root.left,root.right)
