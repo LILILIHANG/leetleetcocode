@@ -12,6 +12,10 @@
 # 3.异或运算满足交换律和结合律，即a⊕b⊕a=b⊕a⊕a=b⊕(a⊕a)=b⊕0=b
 # 数组中的全部元素进行异或运算之后，出现两次的元素异或之后为0，最后只剩下出现一次的元素。
 
+from functools import reduce
+
 class Solution:
     def singleNumber(self, nums: List[int]) -> int:
+        #reduce（function，数据集合） lambda为匿名函数（以x为自变量的函数，后面为函数体）
+        # ^为异或运算
         return reduce(lambda x, y: x ^ y, nums)
