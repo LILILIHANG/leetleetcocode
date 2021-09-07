@@ -1,4 +1,14 @@
+'''
 #从n个数的数组中选取满足目标和的k个数,数字可以无限制重复被选取。
+'''
+
+
+"""
+如果 target 减去一个数得到负数，那么减去一个更大的树依然是负数，同样搜索不到结果。
+基于这个想法，我们可以对输入数组进行排序，添加相关逻辑达到进一步剪枝的目的；
+
+链接：https://leetcode-cn.com/problems/combination-sum/solution/hui-su-suan-fa-jian-zhi-python-dai-ma-java-dai-m-2/
+"""
 class Solution:
     def combinationSum(self, candidates, target: int):
         res = []
@@ -20,9 +30,3 @@ solution=Solution()
 arr=[2,3,5]
 res=solution.combinationSum(arr,8)
 print(res)
-"""
-如果 target 减去一个数得到负数，那么减去一个更大的树依然是负数，同样搜索不到结果。
-基于这个想法，我们可以对输入数组进行排序，添加相关逻辑达到进一步剪枝的目的；
-
-链接：https://leetcode-cn.com/problems/combination-sum/solution/hui-su-suan-fa-jian-zhi-python-dai-ma-java-dai-m-2/
-"""
