@@ -11,11 +11,14 @@
 # print(a)
 
 
-'''每次可以跳1,2,3....m级台阶'''
+'''每次最多可以跳1,2,3....m级台阶'''
+'''完全背包问题'''
 def climbStairs(n,m):
     dp = [0] * (n + 1)
     dp[0] = 1
+    #先遍历背包
     for i in range(n + 1):
+        #再遍历物品
         for j in range(1, m+1):
             if i >= j:
                 dp[i] += dp[i - j]
